@@ -8,6 +8,7 @@ from toga.style.pack import COLUMN, ROW
 
 class HelloWorld(toga.App):
     def startup(self):
+        
         main_box = toga.Box(style=Pack(direction=COLUMN))
 
         
@@ -40,7 +41,7 @@ class HelloWorld(toga.App):
         self.main_window.content = main_box
         self.main_window.show()
 
-    def say_hello(self, widget): self.tag = f"Hello, {self.name_input.value}"
+    def say_hello(self, widget): print(self.name_input.value)  # need to figure out how to put it on the app screen.
 
 
 def main():
